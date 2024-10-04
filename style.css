@@ -1,6 +1,35 @@
+html,body{
+    background-color: green;
+    display: flex;
+    justify-content: center;
+}
 card {
-    background-color: #1e1e1e;
+    width: clamp(327,50vw,381);
+    background-color: red;
+    box-sizing: border-box;
+
 }
 content {
-    font-family: Inter;
+    font-family: inter;
+}
+content profile_picture img{
+    border-radius: 50%;
+    display: block;
+    justify-self: center;
+    align-items: center;
+}
+
+button{
+    border-radius: 9px;
+    min-width: 85vw;
+    max-width: 80vw;
+    padding-top: 14.5px;
+    padding-bottom: 14.5px;
+
+    color: #ffffff;
+    background-color: #333333;
+
+    display: flex;
+    justify-content: center;
+
 }
