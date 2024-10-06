@@ -16,6 +16,7 @@
 --Green: #C4F82A;
 
 /* Spacing */
+--null: 0px;
 --xxs: 4px;
 --xs: 8px;
 --s: 12px;
@@ -26,91 +27,110 @@
 --xxxl: 32px;
 --xxxxl: 38px;
 --xxxxxl: 42px;
-
 }
 
 html,body{
-    background-color: var(--Grey900);
+height: 100%;
+margin: 0;
+}
 
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--Grey900);
 }
 
 /*Container*/
 #Karte {
-    width: clamp(327,50vw,381);
-    background-color: var(--Grey800);
-    box-sizing: border-box;
-    color: var(--white);
-    border-radius: 8px;
 
+/*Container-Responsive machen*/
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 
-    /*Container-Responsive machen*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+width: 100%;
+max-width: 381px;
+background-color: var(--Grey800);
+box-sizing: border-box;
+color: var(--white);
+border-radius: 8px;
 }
 
 /*Image & Text*/
 content {
-    font-family: inter;
+font-family: inter;
+    
+/*Inahlt-Responsive machen*/
+width: 70%;
+text-align: center;
 
-
-
-    /*Inahlt-Responsive machen*/
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
+/*Spacing*/
+margin-bottom: var(--xl);
 }
 
 content profile_picture img{
-    border-radius: 50%;
-    width: 94px;
-    height: 92px;
+border-radius: 50%;
+width: 94px;
+height: 94px;
     
-    margin-top: var(--xxxxl);
+/*Spacing*/
+margin-top: var(--xxxxl);
+margin-bottom: var(--xl);
+    
 }
 
 text h1{
 font-size: var(--HeadingSize);
 font-weight: var(--medium);
+
+/*Spacing*/
+margin-bottom: var(--xs);
+margin-top: var(--null);
 }
 
 #subline{
-    color: var(--Green);
-    font-size: var(--PSize);
-    font-weight: var(--medium);
+color: var(--Green);
+font-size: var(--PSize);
+font-weight: var(--medium);
+
+/*Spacing*/
+margin-bottom: var(--xl);
+margin-top: var(--null);
 }
 
 text p{
-    font-size: var(--PSize);
-    font-weight: var(--Light);
+font-size: var(--PSize);
+font-weight: var(--Light);
 }
 
-/*Links/Buttons*/
+/*Links - Buttons*/
 links{
-    margin-bottom: var(--xxxxl);
-    margin-left: var(--xxxxl);
-    margin-right: var(--xxxxl);
+margin-bottom: var(--xxxxl);
+margin-left: var(--xxxxl);
+margin-right: var(--xxxxl);
+width: 100%;
+text-align: center;
+
 }
 
 button{
-    border-radius: 9px;
-    border: none;
-    width: 80vw;
+border-radius: 9px;
+border: none;
+width: 80%;
 
-    padding-top: var(--m);
-    padding-bottom: var(--m);
-    margin-bottom: var(--m);
+color: var(--white);
+background-color: var(--Grey700);
+font-weight: var(--medium);
 
-    color: var(--white);
-    background-color: var(--Grey700);
-    font-weight: var(--medium);
-    
-
-    /*Buttons-Responsive machen*/
-
+/*Spacing*/
+padding-top: var(--m);
+padding-bottom: var(--m);
+margin-bottom: var(--m);
 }
 
 button:hover {
-    background-color: var(--Green);
-    color: var(--Grey800);
+background-color: var(--Green);
+color: var(--Grey800);
 }
